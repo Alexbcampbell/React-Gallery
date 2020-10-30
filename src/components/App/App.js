@@ -40,6 +40,14 @@ class App extends Component {
       });
   }
 
+  updateGalleryData() {
+    axios({
+      method: 'PUT',
+      url: '/like/:id',
+      data: 
+    })
+  }
+
   render() {
     return (
       <div className="App">
