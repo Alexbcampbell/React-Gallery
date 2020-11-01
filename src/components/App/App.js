@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
-import GalleryItem from '../GalleryItem/GalleryItem';
+// import GalleryItem from '../GalleryItem/GalleryItem';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
@@ -30,7 +30,7 @@ class App extends Component {
       url: '/gallery',
     })
       .then((response) => {
-        console.log('getGalleryData', this.state.galleryList);
+        console.log('getGalleryData', response.data, this.state.galleryList);
         this.setState({
           galleryList: response.data,
         });
@@ -49,7 +49,7 @@ class App extends Component {
       url: 'gallery/like/:id',
     })
       .then((response) => {
-        // getGalleryData();
+        this.getGalleryData();
       })
       .catch((error) => {
         console.log(error);
@@ -65,8 +65,11 @@ class App extends Component {
         <br />
         <p>My Gallery</p>
         {/* <img src="images/goat_small.jpg" /> */}
-        <GalleryList gallery={this.state.galleryList} />
-        <GalleryItem />
+        <GalleryList
+          photo={this.state.galleryList}
+          updateGalleryData={this.updateGalleryData}
+        />
+        {/* <GalleryItem /> */}
       </div>
     );
   }
