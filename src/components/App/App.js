@@ -43,10 +43,10 @@ class App extends Component {
       });
   }
 
-  updateGalleryData() {
+  updateGalleryData(likes) {
     axios({
       method: 'PUT',
-      url: 'gallery/like/:id',
+      url: 'gallery/like/likes',
     })
       .then((response) => {
         this.getGalleryData();
@@ -64,12 +64,10 @@ class App extends Component {
         </header>
         <br />
         <p>My Gallery</p>
-        {/* <img src="images/goat_small.jpg" /> */}
         <GalleryList
           photo={this.state.galleryList}
           updateGalleryData={this.updateGalleryData}
         />
-        {/* <GalleryItem /> */}
       </div>
     );
   }
