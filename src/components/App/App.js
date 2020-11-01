@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
-// import GalleryItem from '../GalleryItem/GalleryItem';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
