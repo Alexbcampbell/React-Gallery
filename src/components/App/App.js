@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
-import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends Component {
   state = {
@@ -40,7 +39,7 @@ class App extends Component {
         });
       });
   }
-
+  //Axios PUT updates like count on client page
   updateGalleryData = (itemID) => {
     console.log('in update gallery');
     axios({
@@ -59,10 +58,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Gallery of my life</h1>
+          <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <br />
-        <p>My Gallery</p>
+        <p className="galleryP">My Gallery</p>
         {/* GalleryList component is linked to GalleryItem component and receives Image, description and likes */}
         <GalleryList
           photo={this.state.galleryList}

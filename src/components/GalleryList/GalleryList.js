@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import './GalleryList.css';
-import 'bootstrap/dist/css/bootstrap.css';
 import GalleryItem from '../GalleryItem/GalleryItem';
 
 class GalleryList extends Component {
@@ -15,8 +13,8 @@ class GalleryList extends Component {
       );
     });
     return (
-      <div className="d-flex flex-row bd-highlight mb-3">
-        <div className="p-2 bd-highlight">{dataList}</div>
+      <div>
+        <div>{dataList}</div>
       </div>
     );
   }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
 import './GalleryItem.css';
 
 class GalleryItem extends Component {
@@ -20,7 +19,7 @@ class GalleryItem extends Component {
         <img
           onClick={this.clickToggle}
           alt="Gallery Pictures"
-          className="img"
+          className="photo"
           src={this.props.item.path}
         />
       );
@@ -31,14 +30,15 @@ class GalleryItem extends Component {
 
   render() {
     return (
-      <div>
-        <div className="rounded">{this.togglePhoto()}</div>
+      <div className="container">
+        <div className="image">{this.togglePhoto()}</div>
         <button
+          className="btn"
           onClick={() => this.props.updateGalleryData(this.props.item.id)}
         >
           Like
         </button>
-        <p>{this.props.item.likes} people love this!</p>
+        <p className="likes">{this.props.item.likes} people love this!</p>
       </div>
     );
   }

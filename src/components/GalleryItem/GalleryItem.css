@@ -1,5 +1,27 @@
-.img {
-  width: 100px;
-  height: 100px;
-  flex-wrap: wrap;
+.photo {
+  width: 250px;
+  height: 250px;
+}
+
+.container {
+  display: inline-block;
+  padding: 80px;
+  background-color: rgb(216, 213, 213);
+  border: solid black;
+}
+
+.btn {
+  border-style: groove;
+  background-color: rgb(88, 228, 226);
+}
+
+.likes {
+  font-style: bold;
+  background-color: rgb(194, 194, 172);
+  border: solid black;
+  color: black;
+}
+
+.galleryP {
+  font-size: 35px;
 }
