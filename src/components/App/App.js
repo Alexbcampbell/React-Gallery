@@ -19,11 +19,10 @@ class App extends Component {
 
   componentDidMount() {
     // component loaded and is ready
-    // get any data that I need
 
     this.getGalleryData();
   }
-
+  //Axios GETS data from server through gallery.data.js
   getGalleryData() {
     axios({
       method: 'GET',
@@ -43,10 +42,11 @@ class App extends Component {
       });
   }
 
-  updateGalleryData(likes) {
+  updateGalleryData = (itemID) => {
+    console.log('in update gallery');
     axios({
       method: 'PUT',
-      url: 'gallery/like/likes',
+      url: `gallery/like/${itemID}`,
     })
       .then((response) => {
         this.getGalleryData();
@@ -54,7 +54,7 @@ class App extends Component {
       .catch((error) => {
         console.log(error);
       });
-  }
+  };
 
   render() {
     return (
@@ -64,6 +64,7 @@ class App extends Component {
         </header>
         <br />
         <p>My Gallery</p>
+        {/* GalleryList component is linked to GalleryItem component and receives Image, description and likes */}
         <GalleryList
           photo={this.state.galleryList}
           updateGalleryData={this.updateGalleryData}

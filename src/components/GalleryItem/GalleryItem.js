@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 
 class GalleryItem extends Component {
   state = {
@@ -31,7 +32,9 @@ class GalleryItem extends Component {
     return (
       <div>
         <div>{this.togglePhoto()}</div>
-        <button onClick={() => this.props.updateGalleryData(this.props.item)}>
+        <button
+          onClick={() => this.props.updateGalleryData(this.props.item.id)}
+        >
           Like
         </button>
         <p>{this.props.item.likes} people love this!</p>
