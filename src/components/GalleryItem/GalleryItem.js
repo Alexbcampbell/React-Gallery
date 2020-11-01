@@ -12,7 +12,7 @@ class GalleryItem extends Component {
       displayImage: this.state.displayImage === false,
     });
   };
-
+  //if photo is toggled, on the click, it is switched to the description of the photo
   togglePhoto = () => {
     if (this.state.displayImage === true) {
       return (
