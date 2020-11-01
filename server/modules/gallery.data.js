@@ -20,13 +20,13 @@ const galleryItems = [
   {
     id: 4,
     path: 'images/colorado.jpg',
-    description: 'My girlfriend and I visiting St. Mary/s Glacier, Colorado',
+    description: 'My girlfriend and I visiting St. Marys Glacier, Colorado',
     likes: 5,
   },
   {
     id: 5,
     path: 'images/chiefs.jpg',
-    description: 'Chief/s snow game 2019',
+    description: 'Chiefs snow game 2019',
     likes: 3,
   },
   {
