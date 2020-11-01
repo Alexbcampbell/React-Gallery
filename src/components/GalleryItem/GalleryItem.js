@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import './GalleryItem.css';
 
 class GalleryItem extends Component {
   state = {

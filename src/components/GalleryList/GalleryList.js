@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../GalleryItem/GalleryItem';
 import './GalleryList.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import GalleryItem from '../GalleryItem/GalleryItem';
