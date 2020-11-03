@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import './App.css';
+
 import GalleryList from '../GalleryList/GalleryList';
+import AboutPage from '../../pages/AboutPage/AboutPage';
 
 class App extends Component {
   state = {
@@ -61,6 +64,7 @@ class App extends Component {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <br />
+        <AboutPage />
         <p className="galleryP">My Gallery</p>
         {/* GalleryList component is linked to GalleryItem component and receives Image, description and likes */}
         <GalleryList
