@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import './App.css';
+import GalleryList from '../../components/GalleryList/GalleryList';
 
-// import GalleryList from '../GalleryList/GalleryList';
-import AboutPage from '../../pages/AboutPage/AboutPage';
-import GalleryPage from '../../pages/GalleryPage/GalleryPage';
-
-class App extends Component {
+class GalleryPage extends Component {
   state = {
     galleryItem: {
       id: '',
@@ -60,29 +55,16 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <div className="App">
-          <header className="App-header">
-            <h1 className="App-title">Gallery of My Life</h1>
-          </header>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">About</Link>
-              </li>
-              <li>
-                <Link to="/gallery">Gallery</Link>
-              </li>
-            </ul>
-          </nav>
-          <main>
-            <Route exact path="/" component={AboutPage} />
-            <Route path="/gallery" component={GalleryPage} />
-          </main>
-        </div>
-      </Router>
+      <div>
+        <p className="galleryP">My Gallery</p>
+        {/* GalleryList component is linked to GalleryItem component and receives Image, description and likes */}
+        <GalleryList
+          photo={this.state.galleryList}
+          updateGalleryData={this.updateGalleryData}
+        />
+      </div>
     );
   }
 }
 
-export default App;
+export default GalleryPage;
